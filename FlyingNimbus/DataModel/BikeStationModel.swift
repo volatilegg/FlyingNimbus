@@ -32,8 +32,8 @@ class BikeStation: Decodable, BikeStationProtocol {
         self.realTimeData = realTimeData.boolValue
 
         self.spacesAvailable = "spacesAvailable" <~~ json
-        self.lat = "x" <~~ json
-        self.lon = "y" <~~ json
+        self.lat = "y" <~~ json
+        self.lon = "x" <~~ json
     }
 
     func getID() -> String {

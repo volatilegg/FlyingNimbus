@@ -23,11 +23,14 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
             latitude: 60.1699,
             longitude: 24.9384
         )
-        // 2
+
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
-
+        let curAnn: MKPointAnnotation = MKPointAnnotation()
+        curAnn.coordinate = location
+        curAnn.title = "djkcbsdkj"
+        mapView.addAnnotation(curAnn)
         listObserve.observe { stationList in
             self.addingAnnotation(stationList)
         }

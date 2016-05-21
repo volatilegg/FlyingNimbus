@@ -14,6 +14,8 @@ class DDAnnotation: MKPointAnnotation {
     init(station: BikeStation) {
         super.init()
         self.coordinate = CLLocationCoordinate2D(latitude: station.getLat(), longitude: station.getLon())
+        print(self.coordinate.latitude)
+        print(self.coordinate.longitude)
         self.title = station.getName()
         self.subtitle = "spaces available: " + String(station.getSpacesAvailable()) + "\n bikes available: " + String(station.getBikesAvailable())
     }

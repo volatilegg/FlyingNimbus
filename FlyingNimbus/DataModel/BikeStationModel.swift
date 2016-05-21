@@ -9,7 +9,7 @@
 import UIKit
 import Gloss
 
-class BikeStation: Decodable {
+class BikeStation: Decodable, BikeStationProtocol {
     let allowDropoff: Bool?
     let bikesAvailable: Int?
     let id: String!
@@ -34,6 +34,30 @@ class BikeStation: Decodable {
         self.spacesAvailable = "spacesAvailable" <~~ json
         self.lat = "x" <~~ json
         self.lon = "y" <~~ json
+    }
+
+    func getID() -> String {
+        return self.id
+    }
+
+    func getName() -> String {
+        return self.name ?? "Banana city"
+    }
+
+    func getLat() -> Double {
+        return self.lat ?? 0
+    }
+
+    func getLon() -> Double {
+        return self.lon ?? 0
+    }
+
+    func getSpacesAvailable() -> Int {
+        return self.spacesAvailable ?? 0
+    }
+
+    func getBikesAvailable() -> Int {
+        return self.bikesAvailable ?? 0
     }
 }
 

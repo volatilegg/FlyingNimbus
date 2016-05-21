@@ -22,7 +22,22 @@ class WebServices {
         print("init web service")
     }
 
-    //Using PromiseKit to guarantee that the respond object will return in the weather form,
-    //otherwise will cause error
+
+    func fetchStationData() -> Promise<StationList> {
+        return Promise { fulfill, reject in
+            Alamofire.request(.GET, "http://api.digitransit.fi/routing/v1/routers/hsl/bike_rental")
+                .validate()
+                .responseData { (response) -> Void in
+                do {
+                    let res = try NSJSONSerialization.JSONObjectWithData(response.data!, options: .AllowFragments) as! [String: AnyObject]
+                    let listObject = StationList(json: res)
+                    fulfill(listObject!)
+                } catch {
+                    let res = String(data: response.data!, encoding: NSUTF8StringEncoding)
+                    reject(NetworkError.BadRequest(result: res!))
+                }
+            }
+        }
+    }
 
 }

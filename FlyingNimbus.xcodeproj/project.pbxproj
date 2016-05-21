@@ -20,6 +20,7 @@
 		E454B6791CF0B5100008C63E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B6761CF0B5100008C63E /* AppDelegate.swift */; };
 		E454B6861CF0BA100008C63E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B6841CF0BA100008C63E /* HomeViewController.swift */; };
 		E454B6871CF0BA100008C63E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E454B6851CF0BA100008C63E /* HomeViewController.xib */; };
+		E4C4E3471CF0C919004278B1 /* BikeStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C4E3461CF0C919004278B1 /* BikeStationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E454B6761CF0B5100008C63E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E454B6841CF0BA100008C63E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E454B6851CF0BA100008C63E /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E4C4E3461CF0C919004278B1 /* BikeStationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeStationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 		E454B6651CF0B0160008C63E /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				E4C4E3461CF0C919004278B1 /* BikeStationModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				E454B6721CF0B0160008C63E /* UIFontExtension.swift in Sources */,
 				E454B6701CF0B0160008C63E /* NumberExtension.swift in Sources */,
 				E454B6741CF0B0160008C63E /* WebServices.swift in Sources */,
+				E4C4E3471CF0C919004278B1 /* BikeStationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

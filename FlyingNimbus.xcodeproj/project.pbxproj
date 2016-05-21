@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E454B6381CF0A54C0008C63E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B6371CF0A54C0008C63E /* AppDelegate.swift */; };
-		E454B63A1CF0A54C0008C63E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B6391CF0A54C0008C63E /* ViewController.swift */; };
-		E454B63D1CF0A54C0008C63E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E454B63B1CF0A54C0008C63E /* Main.storyboard */; };
+		153781DBC5AE76F699DB3594 /* Pods_FlyingNimbusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BA0DE6F1D63650B5EDB470 /* Pods_FlyingNimbusUITests.framework */; };
+		4FFD0FAF5E5AD4E04A7563BE /* Pods_FlyingNimbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3793B5AB4944108A69C9057 /* Pods_FlyingNimbus.framework */; };
+		A6C59C71F09BE08CC94A9CE7 /* Pods_FlyingNimbusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CBD8E227E92AC0F7FA191F3 /* Pods_FlyingNimbusTests.framework */; };
 		E454B63F1CF0A54C0008C63E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E454B63E1CF0A54C0008C63E /* Assets.xcassets */; };
 		E454B6421CF0A54C0008C63E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E454B6401CF0A54C0008C63E /* LaunchScreen.storyboard */; };
 		E454B64D1CF0A54D0008C63E /* FlyingNimbusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B64C1CF0A54D0008C63E /* FlyingNimbusTests.swift */; };
 		E454B6581CF0A54D0008C63E /* FlyingNimbusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B6571CF0A54D0008C63E /* FlyingNimbusUITests.swift */; };
+		E454B6701CF0B0160008C63E /* NumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B6691CF0B0160008C63E /* NumberExtension.swift */; };
+		E454B6721CF0B0160008C63E /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B66B1CF0B0160008C63E /* UIFontExtension.swift */; };
+		E454B6741CF0B0160008C63E /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B66D1CF0B0160008C63E /* WebServices.swift */; };
+		E454B6791CF0B5100008C63E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B6761CF0B5100008C63E /* AppDelegate.swift */; };
+		E454B6861CF0BA100008C63E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B6841CF0BA100008C63E /* HomeViewController.swift */; };
+		E454B6871CF0BA100008C63E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E454B6851CF0BA100008C63E /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +40,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		152CAB7A5F32FBBFEBA5C81C /* Pods-FlyingNimbusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyingNimbusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyingNimbusTests/Pods-FlyingNimbusTests.release.xcconfig"; sourceTree = "<group>"; };
+		281A846647956084E86EE712 /* Pods-FlyingNimbusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyingNimbusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyingNimbusTests/Pods-FlyingNimbusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		36BA0DE6F1D63650B5EDB470 /* Pods_FlyingNimbusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyingNimbusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DFFE5029375EDE60FDDFAD /* Pods-FlyingNimbus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyingNimbus.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyingNimbus/Pods-FlyingNimbus.release.xcconfig"; sourceTree = "<group>"; };
+		6CBD8E227E92AC0F7FA191F3 /* Pods_FlyingNimbusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyingNimbusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3793B5AB4944108A69C9057 /* Pods_FlyingNimbus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyingNimbus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D4BA6A23D1B2CB52C21C33 /* Pods-FlyingNimbusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyingNimbusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyingNimbusUITests/Pods-FlyingNimbusUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B2F4D334937F489F92000DBA /* Pods-FlyingNimbus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyingNimbus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyingNimbus/Pods-FlyingNimbus.debug.xcconfig"; sourceTree = "<group>"; };
+		BCAFD1317071FB7BD231AA07 /* Pods-FlyingNimbusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyingNimbusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyingNimbusUITests/Pods-FlyingNimbusUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E454B6341CF0A54C0008C63E /* FlyingNimbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyingNimbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E454B6371CF0A54C0008C63E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E454B6391CF0A54C0008C63E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E454B63C1CF0A54C0008C63E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E454B63E1CF0A54C0008C63E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E454B6411CF0A54C0008C63E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E454B6431CF0A54C0008C63E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +59,12 @@
 		E454B6531CF0A54D0008C63E /* FlyingNimbusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyingNimbusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E454B6571CF0A54D0008C63E /* FlyingNimbusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyingNimbusUITests.swift; sourceTree = "<group>"; };
 		E454B6591CF0A54D0008C63E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E454B6691CF0B0160008C63E /* NumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtension.swift; sourceTree = "<group>"; };
+		E454B66B1CF0B0160008C63E /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		E454B66D1CF0B0160008C63E /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		E454B6761CF0B5100008C63E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E454B6841CF0BA100008C63E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E454B6851CF0BA100008C63E /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FFD0FAF5E5AD4E04A7563BE /* Pods_FlyingNimbus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6C59C71F09BE08CC94A9CE7 /* Pods_FlyingNimbusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				153781DBC5AE76F699DB3594 /* Pods_FlyingNimbusUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		693E4BA4F5BF44A04DACB113 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2F4D334937F489F92000DBA /* Pods-FlyingNimbus.debug.xcconfig */,
+				44DFFE5029375EDE60FDDFAD /* Pods-FlyingNimbus.release.xcconfig */,
+				281A846647956084E86EE712 /* Pods-FlyingNimbusTests.debug.xcconfig */,
+				152CAB7A5F32FBBFEBA5C81C /* Pods-FlyingNimbusTests.release.xcconfig */,
+				A9D4BA6A23D1B2CB52C21C33 /* Pods-FlyingNimbusUITests.debug.xcconfig */,
+				BCAFD1317071FB7BD231AA07 /* Pods-FlyingNimbusUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		88A3EC2A954D15B534112941 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3793B5AB4944108A69C9057 /* Pods_FlyingNimbus.framework */,
+				6CBD8E227E92AC0F7FA191F3 /* Pods_FlyingNimbusTests.framework */,
+				36BA0DE6F1D63650B5EDB470 /* Pods_FlyingNimbusUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E454B62B1CF0A54C0008C63E = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +125,8 @@
 				E454B64B1CF0A54D0008C63E /* FlyingNimbusTests */,
 				E454B6561CF0A54D0008C63E /* FlyingNimbusUITests */,
 				E454B6351CF0A54C0008C63E /* Products */,
+				693E4BA4F5BF44A04DACB113 /* Pods */,
+				88A3EC2A954D15B534112941 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +143,10 @@
 		E454B6361CF0A54C0008C63E /* FlyingNimbus */ = {
 			isa = PBXGroup;
 			children = (
-				E454B6371CF0A54C0008C63E /* AppDelegate.swift */,
-				E454B6391CF0A54C0008C63E /* ViewController.swift */,
-				E454B63B1CF0A54C0008C63E /* Main.storyboard */,
+				E454B6751CF0B5100008C63E /* Cores */,
+				E454B6771CF0B5100008C63E /* Scenes */,
+				E454B6651CF0B0160008C63E /* DataModel */,
+				E454B6681CF0B0160008C63E /* Utils */,
 				E454B63E1CF0A54C0008C63E /* Assets.xcassets */,
 				E454B6401CF0A54C0008C63E /* LaunchScreen.storyboard */,
 				E454B6431CF0A54C0008C63E /* Info.plist */,
@@ -125,6 +172,48 @@
 			path = FlyingNimbusUITests;
 			sourceTree = "<group>";
 		};
+		E454B6651CF0B0160008C63E /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		E454B6681CF0B0160008C63E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E454B6691CF0B0160008C63E /* NumberExtension.swift */,
+				E454B66B1CF0B0160008C63E /* UIFontExtension.swift */,
+				E454B66D1CF0B0160008C63E /* WebServices.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E454B6751CF0B5100008C63E /* Cores */ = {
+			isa = PBXGroup;
+			children = (
+				E454B6761CF0B5100008C63E /* AppDelegate.swift */,
+			);
+			path = Cores;
+			sourceTree = "<group>";
+		};
+		E454B6771CF0B5100008C63E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E454B6781CF0B5100008C63E /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E454B6781CF0B5100008C63E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E454B6841CF0BA100008C63E /* HomeViewController.swift */,
+				E454B6851CF0BA100008C63E /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E454B65C1CF0A54D0008C63E /* Build configuration list for PBXNativeTarget "FlyingNimbus" */;
 			buildPhases = (
+				034CEF757CD1AFC0BDC40A36 /* 📦 Check Pods Manifest.lock */,
 				E454B6301CF0A54C0008C63E /* Sources */,
 				E454B6311CF0A54C0008C63E /* Frameworks */,
 				E454B6321CF0A54C0008C63E /* Resources */,
+				B618E38D8FA019920DBF6955 /* 📦 Embed Pods Frameworks */,
+				9E5570D0139AF6A50E3BFDC0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E454B65F1CF0A54D0008C63E /* Build configuration list for PBXNativeTarget "FlyingNimbusTests" */;
 			buildPhases = (
+				B25ABD4B0F067DCA302AEE47 /* 📦 Check Pods Manifest.lock */,
 				E454B6441CF0A54D0008C63E /* Sources */,
 				E454B6451CF0A54D0008C63E /* Frameworks */,
 				E454B6461CF0A54D0008C63E /* Resources */,
+				C7270798F215215B1BB64B1B /* 📦 Embed Pods Frameworks */,
+				E3D72894DE8F60CFDC995FDD /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E454B6621CF0A54D0008C63E /* Build configuration list for PBXNativeTarget "FlyingNimbusUITests" */;
 			buildPhases = (
+				1B626142BEE82A68747D44D6 /* 📦 Check Pods Manifest.lock */,
 				E454B64F1CF0A54D0008C63E /* Sources */,
 				E454B6501CF0A54D0008C63E /* Frameworks */,
 				E454B6511CF0A54D0008C63E /* Resources */,
+				97C487B929772E242F8ADF42 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,7 +328,7 @@
 			files = (
 				E454B6421CF0A54C0008C63E /* LaunchScreen.storyboard in Resources */,
 				E454B63F1CF0A54C0008C63E /* Assets.xcassets in Resources */,
-				E454B63D1CF0A54C0008C63E /* Main.storyboard in Resources */,
+				E454B6871CF0BA100008C63E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +348,139 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		034CEF757CD1AFC0BDC40A36 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1B626142BEE82A68747D44D6 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97C487B929772E242F8ADF42 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyingNimbusUITests/Pods-FlyingNimbusUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E5570D0139AF6A50E3BFDC0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyingNimbus/Pods-FlyingNimbus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B25ABD4B0F067DCA302AEE47 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B618E38D8FA019920DBF6955 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyingNimbus/Pods-FlyingNimbus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7270798F215215B1BB64B1B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyingNimbusTests/Pods-FlyingNimbusTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3D72894DE8F60CFDC995FDD /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyingNimbusTests/Pods-FlyingNimbusTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E454B6301CF0A54C0008C63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E454B63A1CF0A54C0008C63E /* ViewController.swift in Sources */,
-				E454B6381CF0A54C0008C63E /* AppDelegate.swift in Sources */,
+				E454B6861CF0BA100008C63E /* HomeViewController.swift in Sources */,
+				E454B6791CF0B5100008C63E /* AppDelegate.swift in Sources */,
+				E454B6721CF0B0160008C63E /* UIFontExtension.swift in Sources */,
+				E454B6701CF0B0160008C63E /* NumberExtension.swift in Sources */,
+				E454B6741CF0B0160008C63E /* WebServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +516,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E454B63B1CF0A54C0008C63E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E454B63C1CF0A54C0008C63E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E454B6401CF0A54C0008C63E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -399,6 +614,7 @@
 		};
 		E454B65D1CF0A54D0008C63E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2F4D334937F489F92000DBA /* Pods-FlyingNimbus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FlyingNimbus/Info.plist;
@@ -410,6 +626,7 @@
 		};
 		E454B65E1CF0A54D0008C63E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44DFFE5029375EDE60FDDFAD /* Pods-FlyingNimbus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FlyingNimbus/Info.plist;
@@ -421,6 +638,7 @@
 		};
 		E454B6601CF0A54D0008C63E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 281A846647956084E86EE712 /* Pods-FlyingNimbusTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FlyingNimbusTests/Info.plist;
@@ -433,6 +651,7 @@
 		};
 		E454B6611CF0A54D0008C63E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152CAB7A5F32FBBFEBA5C81C /* Pods-FlyingNimbusTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FlyingNimbusTests/Info.plist;
@@ -445,6 +664,7 @@
 		};
 		E454B6631CF0A54D0008C63E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9D4BA6A23D1B2CB52C21C33 /* Pods-FlyingNimbusUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FlyingNimbusUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -456,6 +676,7 @@
 		};
 		E454B6641CF0A54D0008C63E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCAFD1317071FB7BD231AA07 /* Pods-FlyingNimbusUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FlyingNimbusUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -484,6 +705,7 @@
 				E454B65E1CF0A54D0008C63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E454B65F1CF0A54D0008C63E /* Build configuration list for PBXNativeTarget "FlyingNimbusTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +714,7 @@
 				E454B6611CF0A54D0008C63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E454B6621CF0A54D0008C63E /* Build configuration list for PBXNativeTarget "FlyingNimbusUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +723,7 @@
 				E454B6641CF0A54D0008C63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

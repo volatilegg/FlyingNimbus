@@ -52,17 +52,17 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
     }
-    
+
     func setMapCenterToCurrentLocation() {
         setMapCenter(self.currentLocation.value)
     }
-    
+
     func refreshList() {
         WebServices.sharedInstance.fetchStationData().then { (lists) in
             self.listObserve.next(lists)
         }
     }
-    
+
     func addingAnnotation(list: StationList) {
         for station in list.lists {
             let annotation = DDAnnotation(station: station)
@@ -72,22 +72,29 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
 
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? DDAnnotation {
-            let identifier = "pin"
-            var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
-                as? MKPinAnnotationView {
-                dequeuedView.annotation = annotation
-                view = dequeuedView
+            let reuseId = "bikePin"
+            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            if view == nil {
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                view!.canShowCallout = true
+                view!.calloutOffset = CGPoint(x: -5, y: 5)
             } else {
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
+                view!.annotation = annotation
             }
+
+            view!.image = UIImage(named: annotation.imageName)
             return view
         }
         return nil
     }
 
+    func mapView(mapView: MKMapView, didAddAnnotationViews views: [MKAnnotationView]) {
+        for view in views {
+            if (view.annotation?.isKindOfClass(MKUserLocation) == true) {
+                self.mapView.bringSubviewToFront(view)
+            }
+        }
+    }
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.currentLocation.next((manager.location?.coordinate)!)
     }

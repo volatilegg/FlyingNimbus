@@ -10,13 +10,13 @@ import UIKit
 import MapKit
 
 class DDAnnotation: MKPointAnnotation {
-    var imageName: String!
+    var image: UIImage!
 
     init(station: BikeStation) {
         super.init()
         self.coordinate = CLLocationCoordinate2D(latitude: station.getLat(), longitude: station.getLon())
         self.title = station.getName()
         self.subtitle = "bikes available: " + String(station.getBikesAvailable()) + " spaces available: " + String(station.getSpacesAvailable())
-        self.imageName = "bike_icon"
+        self.image = UIImage(named: "bike_icon")
     }
 }

@@ -81,8 +81,8 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             } else {
                 view!.annotation = annotation
             }
-
-            view!.image = UIImage(named: annotation.imageName)
+            view?.backgroundColor = UIColor.clearColor()
+            view!.image = annotation.image
             return view
         }
         return nil

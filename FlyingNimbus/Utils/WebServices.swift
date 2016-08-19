@@ -31,6 +31,7 @@ class WebServices {
                 do {
                     let res = try NSJSONSerialization.JSONObjectWithData(response.data!, options: .AllowFragments) as! [String: AnyObject]
                     let listObject = StationList(json: res)
+                    print(res)
                     fulfill(listObject!)
                 } catch {
                     let res = String(data: response.data!, encoding: NSUTF8StringEncoding)

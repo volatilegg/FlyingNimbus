@@ -19,6 +19,7 @@
 		E454B6741CF0B0160008C63E /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B66D1CF0B0160008C63E /* WebServices.swift */; };
 		E454B6791CF0B5100008C63E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B6761CF0B5100008C63E /* AppDelegate.swift */; };
 		E454B6861CF0BA100008C63E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E454B6841CF0BA100008C63E /* HomeViewController.swift */; };
+		E4BE7D6E1CF32C9100999BE6 /* PaintCode+BikeIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BE7D6D1CF32C9100999BE6 /* PaintCode+BikeIcons.swift */; };
 		E4C4E3471CF0C919004278B1 /* BikeStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C4E3461CF0C919004278B1 /* BikeStationModel.swift */; };
 		E4FE61721CF0D655007101F7 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FE61711CF0D655007101F7 /* ModelProtocol.swift */; };
 		E4FE61741CF0DAB1007101F7 /* DDAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FE61731CF0DAB1007101F7 /* DDAnnotation.swift */; };
@@ -66,6 +67,7 @@
 		E454B66D1CF0B0160008C63E /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		E454B6761CF0B5100008C63E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E454B6841CF0BA100008C63E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E4BE7D6D1CF32C9100999BE6 /* PaintCode+BikeIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PaintCode+BikeIcons.swift"; sourceTree = "<group>"; };
 		E4C4E3461CF0C919004278B1 /* BikeStationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeStationModel.swift; sourceTree = "<group>"; };
 		E4FE61711CF0D655007101F7 /* ModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
 		E4FE61731CF0DAB1007101F7 /* DDAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDAnnotation.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		E454B6361CF0A54C0008C63E /* FlyingNimbus */ = {
 			isa = PBXGroup;
 			children = (
+				E4BE7D6B1CF32C6A00999BE6 /* Extensions */,
 				E454B6751CF0B5100008C63E /* Cores */,
 				E454B6771CF0B5100008C63E /* Scenes */,
 				E454B6651CF0B0160008C63E /* DataModel */,
@@ -218,6 +221,22 @@
 				E454B6841CF0BA100008C63E /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		E4BE7D6B1CF32C6A00999BE6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E4BE7D6C1CF32C6A00999BE6 /* UIImage+Paintcode */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E4BE7D6C1CF32C6A00999BE6 /* UIImage+Paintcode */ = {
+			isa = PBXGroup;
+			children = (
+				E4BE7D6D1CF32C9100999BE6 /* PaintCode+BikeIcons.swift */,
+			);
+			path = "UIImage+Paintcode";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +315,7 @@
 				TargetAttributes = {
 					E454B6331CF0A54C0008C63E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FPU83P3ULU;
 					};
 					E454B6471CF0A54D0008C63E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -489,6 +509,7 @@
 				E454B6741CF0B0160008C63E /* WebServices.swift in Sources */,
 				E4FE61721CF0D655007101F7 /* ModelProtocol.swift in Sources */,
 				E4C4E3471CF0C919004278B1 /* BikeStationModel.swift in Sources */,
+				E4BE7D6E1CF32C9100999BE6 /* PaintCode+BikeIcons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,10 +646,13 @@
 			baseConfigurationReference = B2F4D334937F489F92000DBA /* Pods-FlyingNimbus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlyingNimbus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Goku.FlyingNimbus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -637,10 +661,13 @@
 			baseConfigurationReference = 44DFFE5029375EDE60FDDFAD /* Pods-FlyingNimbus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlyingNimbus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Goku.FlyingNimbus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

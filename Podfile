@@ -11,7 +11,9 @@ target 'FlyingNimbus' do
   # Json -> Object and vice versa. Check for more information: https://github.com/hkellaway/Gloss
   pod 'Gloss', '~> 0.7'
   # DataBus. Check for more information https://github.com/mxcl/PromiseKit.git
-  pod 'PromiseKit', '~> 3.1'
+  pod 'PromiseKit',
+  :git => 'git@github.com:rad3ks/PromiseKit.git',
+  :branch => 'bug/415'
   # Binding. Check for more information: https://github.com/SwiftBond/Bond
   pod 'Bond', '~> 4.3'
   

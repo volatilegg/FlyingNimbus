@@ -10,32 +10,32 @@ import Foundation
 import Alamofire
 import PromiseKit
 
-enum NetworkError: ErrorType {
-    case BadRequest(result: String)
+enum NetworkError: Error {
+    case badRequest(result: String)
 }
 
 class WebServices {
     //We only need one instance web service at once, so singleton all the way
     static let sharedInstance = WebServices()
     //private to prevent other classes using default initializer of this class
-    private init() {
+    fileprivate init() {
         print("init web service")
     }
 
 
     func fetchStationData() -> Promise<StationList> {
         return Promise { fulfill, reject in
-            Alamofire.request(.GET, "http://api.digitransit.fi/routing/v1/routers/hsl/bike_rental")
+            Alamofire.request("http://api.digitransit.fi/routing/v1/routers/hsl/bike_rental")                
                 .validate()
                 .responseData { (response) -> Void in
                 do {
-                    let res = try NSJSONSerialization.JSONObjectWithData(response.data!, options: .AllowFragments) as! [String: AnyObject]
+                    let res = try JSONSerialization.jsonObject(with: response.data!, options: .allowFragments) as! [String: AnyObject]
                     let listObject = StationList(json: res)
                     print(res)
                     fulfill(listObject!)
                 } catch {
-                    let res = String(data: response.data!, encoding: NSUTF8StringEncoding)
-                    reject(NetworkError.BadRequest(result: res!))
+                    let res = String(data: response.data!, encoding: String.Encoding.utf8)
+                    reject(NetworkError.badRequest(result: res!))
                 }
             }
         }

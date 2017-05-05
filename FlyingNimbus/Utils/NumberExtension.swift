@@ -20,18 +20,18 @@ extension Float {
 extension CGSize {
 
     func screenSize() -> CGSize {
-        return (UIScreen.mainScreen().bounds.size)
+        return (UIScreen.main.bounds.size)
     }
 
     static func screenWidth() -> CGFloat {
-        return (UIScreen.mainScreen().bounds.size.width)
+        return (UIScreen.main.bounds.size.width)
     }
 
     static func screenHeight() -> CGFloat {
-        return (UIScreen.mainScreen().bounds.size.height)
+        return (UIScreen.main.bounds.size.height)
     }
 
     static func screenRatio() -> CGFloat {
-        return (UIScreen.mainScreen().bounds.size.width/320)
+        return (UIScreen.main.bounds.size.width/320)
     }
 }

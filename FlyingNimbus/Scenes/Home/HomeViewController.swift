@@ -20,7 +20,7 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
 
         self.mapView.delegate = self
         self.locationManager.requestAlwaysAuthorization()
@@ -33,21 +33,22 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         setMapCenter(centerHelsinki)
         self.view.addSubview(mapView)
 
-        listObserve.observe { stationList in
+        listObserve.observeNext(with: { stationList in
             self.addingAnnotation(stationList)
-        }
+        })
+        
         let locationButton: UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        locationButton.setImage(UIImage(named: "location"), forState: .Normal)
-        locationButton.addTarget(self, action: #selector(HomeViewController.setMapCenterToCurrentLocation), forControlEvents: .TouchUpInside)
+        locationButton.setImage(UIImage(named: "location"), for: UIControlState())
+        locationButton.addTarget(self, action: #selector(HomeViewController.setMapCenterToCurrentLocation), for: .touchUpInside)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: locationButton)
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         refreshList()
     }
 
-    func setMapCenter(location: CLLocationCoordinate2D) {
+    func setMapCenter(_ location: CLLocationCoordinate2D) {
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
@@ -63,17 +64,17 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         }
     }
 
-    func addingAnnotation(list: StationList) {
+    func addingAnnotation(_ list: StationList) {
         for station in list.lists {
             let annotation = DDAnnotation(station: station)
             mapView.addAnnotation(annotation)
         }
     }
 
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? DDAnnotation {
             let reuseId = "bikePin"
-            var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+            var view = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
             if view == nil {
                 view = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
                 view!.canShowCallout = true
@@ -81,21 +82,21 @@ class HomeViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             } else {
                 view!.annotation = annotation
             }
-            view?.backgroundColor = UIColor.clearColor()
+            view?.backgroundColor = UIColor.clear
             view!.image = annotation.image
             return view
         }
         return nil
     }
 
-    func mapView(mapView: MKMapView, didAddAnnotationViews views: [MKAnnotationView]) {
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
         for view in views {
-            if (view.annotation?.isKindOfClass(MKUserLocation) == true) {
-                self.mapView.bringSubviewToFront(view)
+            if (view.annotation?.isKind(of: MKUserLocation.self) == true) {
+                self.mapView.bringSubview(toFront: view)
             }
         }
     }
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.currentLocation.next((manager.location?.coordinate)!)
     }
 }

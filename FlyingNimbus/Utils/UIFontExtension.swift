@@ -9,23 +9,23 @@
 import UIKit
 
 extension UIFont {
-    class func openSansRegularFont(fontSize: CGFloat) -> UIFont {
+    class func openSansRegularFont(_ fontSize: CGFloat) -> UIFont {
         return UIFont(name: "OpenSans", size: fontSize)!
     }
 
-    class func openSansItalicFont(fontSize: CGFloat) -> UIFont {
+    class func openSansItalicFont(_ fontSize: CGFloat) -> UIFont {
         return UIFont(name: "OpenSans-Italic", size: fontSize)!
     }
 
-    class func appMediumFont(fontSize: CGFloat) -> UIFont {
+    class func appMediumFont(_ fontSize: CGFloat) -> UIFont {
         return UIFont(name: "Helvetica-Bold", size: fontSize)!
     }
 
-    class func appRegularFont(fontSize: CGFloat) -> UIFont {
+    class func appRegularFont(_ fontSize: CGFloat) -> UIFont {
         return UIFont(name: "Helvetica", size: fontSize)!
     }
 
-    class func appLightFont(fontSize: CGFloat) -> UIFont {
+    class func appLightFont(_ fontSize: CGFloat) -> UIFont {
         return UIFont(name: "Helvetica-Light", size: fontSize)!
     }
 }
